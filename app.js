@@ -78,7 +78,7 @@ function checkMatch() {
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
         alert('You clicked the same card!')
     }
-    if (cardsChosen[0] === cardsChosen[1] && optionOneId !== optionOneId) {
+    if (cardsChosen[0] == cardsChosen[1] && optionOneId !== optionOneId) {
         alert('You found a match!!')
         cards[optionOneId].setAttribute('src', 'images/white.png')
         cards[optionTwoId].setAttribute('src', 'images/white.png')
