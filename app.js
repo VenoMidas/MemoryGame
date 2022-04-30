@@ -73,7 +73,7 @@ function checkMatch() {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
-    if (optionOneId === optionTwoId) {
+    if (optionOneId == optionTwoId) {
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
         alert('You clicked the same card!')
@@ -93,7 +93,7 @@ function checkMatch() {
     resultDisplay.textContent = cardsWon.length
     cardsChosen = []
     cardsChosenIds = []
-    if (cardsWon.length === cardArray.length/2) {
+    if (cardsWon.length == cardArray.length/2) {
         resultDisplay.textContent = 'Congratulations! You found them all!!'
     }
 }
@@ -103,7 +103,7 @@ function flipCard() {
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length === 2) {
+    if (cardsChosen.length == 2) {
         setTimeout(checkMatch, 500)
     }
 }   
