@@ -48,15 +48,12 @@ const cardArray = [
         img: 'images/pizza.png',
     },
 ]
-
 cardArray.sort(() => 0.5 - Math.random())
-
 const gridDisplay = document.querySelector('#grid')
 const resultDisplay = document.querySelector('#result')
 let cardsChosen = []
 let cardsChosenIds = []
 const cardsWon = []
-
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
@@ -66,9 +63,7 @@ function createBoard() {
         gridDisplay.appendChild(card)
     }
 }
-
 createBoard()
-
 function checkMatch() {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenIds[0]
@@ -97,7 +92,6 @@ function checkMatch() {
         resultDisplay.textContent = 'Congratulations! You found them all!!'
     }
 }
-
 function flipCard() {
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
@@ -107,17 +101,3 @@ function flipCard() {
         setTimeout(checkMatch, 500)
     }
 }   
-
-
-
-
-
-
-
-
-
-
-
-
-
-//line 82 from the video (checking a match for chosen cards) to if(cardsChosen[0] == cardsChosen[1] && optionOneId != optionTwoId){
